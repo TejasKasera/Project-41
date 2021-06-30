@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="p5.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+     <script src="./p5.play.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+    <style>
+      
+
+      #image-data{
+          position: relative;
+          top: 90%;
+        width: 350px;
+        height: 300px;
+        background-color: black;
+      }
+    </style>
+    
+  </head>
+  <body onload=set_time()>
+      
+    <div id = "image-data">
+      <img src = "2.png" width = "400" height="300" id="data"> 
+    </div>
+
+    <script src="matter.js"></script>
+    <script src="sketch.js"></script>
+    <script src="ball.js"></script>
+    <script src="jt.js"></script>
+
+
+      <script>
+
+        var start = 1;
+
+
+        function set_time(){
+          setInterval(image_show,3000);
+        }
+
+        function image_show(){
+                 var image_data;
+
+                  if(start==1){
+                     image_data = "1.png"
+            }else if(start==2){
+                     image_data = "2.png"
+            }else if(start==3){
+                     image_data = "3.png"
+            }else if(start==4){
+                     image_data = "4.png"
+            }else {
+                     start = 1;
+            }
+   
+            document.getElementById("data").src = ""+image_data;
+            start++;
+            }
+        
+         
+      </script>
+
+  
+     
+        
+  
+
+</body>
+</html>
